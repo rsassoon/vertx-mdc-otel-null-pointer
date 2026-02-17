@@ -1,0 +1,11 @@
+services:
+  jaeger:
+    image: jaegertracing/jaeger:latest
+    ports:
+      - "16686" # Jaeger UI - http://localhost::port} check http://localhost:8090/q/dev-ui/dev-services
+      - "4318"   # OTLP HTTP receiver
+    labels:
+      io.quarkus.devservices.compose.config_map.port.4318: dev.services.jaeger.receiver.port
+      io.quarkus.devservices.compose.config_map.port.16686: dev.services.jaeger.ui.port
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true

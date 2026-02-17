@@ -1,0 +1,257 @@
+{
+  "timestamp": "2026-02-02T11:31:33.522298938Z",
+  "sequence": 223,
+  "loggerClassName": "org.jboss.logging.Logger",
+  "loggerName": "io.quarkus.mutiny.runtime.MutinyInfrastructure",
+  "level": "ERROR",
+  "message": "Mutiny had to drop the following exception",
+  "threadName": "executor-thread-2",
+  "threadId": 47,
+  "mdc": {
+    "spanId": "b2f5ff79d9eadab4",
+    "parentId": "7ccc5429d3441cd2",
+    "traceId": "b066dc3fc1f3ea7bb3e4f7a8aca87be2",
+    "sampled": "true"
+  },
+  "ndc": "",
+  "hostName": "stg-688684bb59-4xtb7",
+  "processName": "/usr/lib/jvm/java-21-amazon-corretto/bin/java",
+  "processId": 1,
+  "exception": {
+    "refId": 1,
+    "exceptionType": "java.lang.NullPointerException",
+    "message": null,
+    "frames": [
+      {
+        "class": "java.util.concurrent.ConcurrentHashMap",
+        "method": "putVal",
+        "line": 1011
+      },
+      {
+        "class": "java.util.concurrent.ConcurrentHashMap",
+        "method": "putAll",
+        "line": 1089
+      },
+      {
+        "class": "io.quarkus.vertx.core.runtime.VertxMDC",
+        "method": "putAll",
+        "line": 167
+      },
+      {
+        "class": "io.quarkus.vertx.core.runtime.VertxMDC",
+        "method": "reinitializeVertxMdc",
+        "line": 361
+      },
+      {
+        "class": "io.quarkus.opentelemetry.runtime.OpenTelemetryUtil",
+        "method": "setMDCData",
+        "line": 80
+      },
+      {
+        "class": "io.quarkus.opentelemetry.runtime.QuarkusContextStorage",
+        "method": "attach",
+        "line": 75
+      },
+      {
+        "class": "io.quarkus.opentelemetry.runtime.QuarkusContextStorage",
+        "method": "attach",
+        "line": 43
+      },
+      {
+        "class": "io.quarkus.opentelemetry.runtime.propagation.OpenTelemetryMpContextPropagationProvider$1",
+        "method": "begin",
+        "line": 26
+      },
+      {
+        "class": "io.smallrye.context.impl.SlowActiveContextState",
+        "method": "<init>",
+        "line": 29
+      },
+      {
+        "class": "io.smallrye.context.impl.SlowCapturedContextState",
+        "method": "begin",
+        "line": 34
+      },
+      {
+        "class": "io.smallrye.context.impl.SlowCapturedContextState",
+        "method": "begin",
+        "line": 13
+      },
+      {
+        "class": "io.smallrye.context.impl.wrappers.SlowContextualConsumer",
+        "method": "accept",
+        "line": 20
+      },
+      {
+        "class": "io.smallrye.mutiny.helpers.UniCallbackSubscriber",
+        "method": "onItem",
+        "line": 73
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription",
+        "method": "forwardResult",
+        "line": 63
+      },
+      {
+        "class": "io.smallrye.context.impl.wrappers.SlowContextualBiConsumer",
+        "method": "accept",
+        "line": 21
+      },
+      {
+        "class": "java.util.concurrent.CompletableFuture",
+        "method": "uniWhenComplete",
+        "line": 863
+      },
+      {
+        "class": "java.util.concurrent.CompletableFuture$UniWhenComplete",
+        "method": "tryFire",
+        "line": 841
+      },
+      {
+        "class": "java.util.concurrent.CompletableFuture",
+        "method": "unipush",
+        "line": 593
+      },
+      {
+        "class": "java.util.concurrent.CompletableFuture",
+        "method": "uniWhenCompleteStage",
+        "line": 885
+      },
+      {
+        "class": "java.util.concurrent.CompletableFuture",
+        "method": "whenComplete",
+        "line": 2357
+      },
+      {
+        "class": "io.smallrye.context.ContextualCompletableFuture",
+        "method": "whenComplete",
+        "line": 275
+      },
+      {
+        "class": "io.smallrye.context.ContextualCompletableFuture",
+        "method": "whenComplete",
+        "line": 15
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription",
+        "method": "forward",
+        "line": 51
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage",
+        "method": "subscribe",
+        "line": 35
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.AbstractUni",
+        "method": "subscribe",
+        "line": 35
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.uni.builders.UniCreateFromDeferredSupplier",
+        "method": "subscribe",
+        "line": 36
+      },
+      {
+        "class": "io.smallrye.mutiny.operators.AbstractUni",
+        "method": "subscribe",
+        "line": 35
+      },
+      {
+        "class": "io.smallrye.mutiny.groups.UniSubscribe",
+        "method": "withSubscriber",
+        "line": 51
+      },
+      {
+        "class": "io.smallrye.mutiny.groups.UniSubscribe",
+        "method": "with",
+        "line": 110
+      },
+      {
+        "class": "io.smallrye.mutiny.groups.UniSubscribe",
+        "method": "with",
+        "line": 88
+      },
+      {
+        "class": "io.vertx.mutiny.core.Context$1",
+        "method": "handle",
+        "line": 172
+      },
+      {
+        "class": "io.vertx.mutiny.core.Context$1",
+        "method": "handle",
+        "line": 170
+      },
+      {
+        "class": "io.vertx.core.impl.ContextImpl",
+        "method": "lambda$executeBlocking$5",
+        "line": 205
+      },
+      {
+        "class": "io.vertx.core.impl.ContextInternal",
+        "method": "dispatch",
+        "line": 270
+      },
+      {
+        "class": "io.vertx.core.impl.ContextImpl$1",
+        "method": "execute",
+        "line": 221
+      },
+      {
+        "class": "io.vertx.core.impl.WorkerTask",
+        "method": "run",
+        "line": 56
+      },
+      {
+        "class": "io.vertx.core.impl.TaskQueue",
+        "method": "run",
+        "line": 81
+      },
+      {
+        "class": "io.quarkus.vertx.core.runtime.VertxCoreRecorder$15",
+        "method": "runWith",
+        "line": 666
+      },
+      {
+        "class": "org.jboss.threads.EnhancedQueueExecutor$Task",
+        "method": "doRunWith",
+        "line": 2651
+      },
+      {
+        "class": "org.jboss.threads.EnhancedQueueExecutor$Task",
+        "method": "run",
+        "line": 2630
+      },
+      {
+        "class": "org.jboss.threads.EnhancedQueueExecutor",
+        "method": "runThreadBody",
+        "line": 1622
+      },
+      {
+        "class": "org.jboss.threads.EnhancedQueueExecutor$ThreadBody",
+        "method": "run",
+        "line": 1589
+      },
+      {
+        "class": "org.jboss.threads.DelegatingRunnable",
+        "method": "run",
+        "line": 11
+      },
+      {
+        "class": "org.jboss.threads.ThreadLocalResettingRunnable",
+        "method": "run",
+        "line": 11
+      },
+      {
+        "class": "io.netty.util.concurrent.FastThreadLocalRunnable",
+        "method": "run",
+        "line": 30
+      },
+      {
+        "class": "java.lang.Thread",
+        "method": "run",
+        "line": 1583
+      }
+    ]
+  }
+}
